@@ -1,4 +1,4 @@
-let counterValue = 2
+let counterValue = 0
 
 const plusEl = document.querySelector('[data-action="increment"]')
 
@@ -8,21 +8,21 @@ const valueEl = document.querySelector("#value")
 
 const nullEl = document.querySelector('[data-action = "null"]')
 
-value.textContent=counterValue
+valueEl.textContent=counterValue
 
 plusEl.addEventListener('click', () => {
     counterValue += 1
-    value.textContent = counterValue
+    valueEl.textContent = counterValue
     
 })
 
 minusEl.addEventListener('click', () => {
     counterValue -= 1
-    value.textContent = counterValue
+    valueEl.textContent = counterValue
 })
 
 
-// use target only if two button
+// use only if two button
 
 // const handleBtnClick = ({target}) => {
 //     console.log(target)
