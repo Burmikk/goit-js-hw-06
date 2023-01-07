@@ -7,9 +7,9 @@ const divBoxEl = document.querySelector("#boxes")
 const destroyEl =document.querySelector ("[data-destroy]")
 
 createEl.addEventListener("click", onCreateElement)
+  let size = 30;
 
 function onCreateElement() {
-  let size = 30;
   let arr = []
 
   const inputValue = Number(inputEl.value)
@@ -24,7 +24,7 @@ function onCreateElement() {
     size += 10
   }
   divBoxEl.append(...arr)
-  return arr
+ console.log(arr)
 }
 
 
@@ -32,6 +32,7 @@ destroyEl.addEventListener("click", onDestroyElement)
 
 function onDestroyElement() {
   divBoxEl.innerHTML = ""
+  size = 30
 }
 
 
